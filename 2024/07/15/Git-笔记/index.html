@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Git 笔记 | spikenauy&#39;s blog</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="Git 笔记 | spikenauy&#39;s blog">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hello World">
+<meta property="og:url" content="http://spikenauy.github.io/2024/07/14/hello-world/index.html">
+<meta property="og:site_name" content="spikenauy&#39;s blog">
+<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-07-14T14:05:45.165Z">
+<meta property="article:modified_time" content="2024-07-14T14:05:45.166Z">
+<meta property="article:author" content="spikenauy">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>spikenauy</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="rss"
+               href="/atom.xml"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-rss"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="github"
+               href="https://github.com/yelog"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="facebook"
+               href="https://www.facebook.com/faker.tops"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-facebook"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+        
+            <a title="instagram"
+               href="https://www.facebook.com/faker.tops"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-instagram"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="reddit"
+               href="https://www.reddit.com/user/yelog/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-reddit"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="weibo"
+               href="http://weibo.com/u/2307534817"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-weibo"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="jianshu"
+               href="https://www.jianshu.com/u/ff56736de7cf"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-jianshu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="zhihu"
+               href="https://www.zhihu.com/people/jaytp/activities"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-zhihu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+            <a title="oschina"
+               href="https://my.oschina.net/yelog"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-oschina"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+            <a title="email"
+               href="mailto:jaytp@qq.com"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="qq"
+               href="http://wpa.qq.com/msgrd?v=3&uin=872336115&site=qq&menu=yes"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="kugou"
+               href="https://www.kugou.com/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-kugou"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="neteasemusic"
+               href="https://music.163.com/#/user/home?id=88151013"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-neteasemusic"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(2)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="-工具">
+            
+            -工具
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">关于</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="2">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="全部文章 -工具 "
+           href="/2024/07/15/Git-%E7%AC%94%E8%AE%B0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Git 笔记">Git 笔记</span>
+            <span class="post-date" title="2024-07-15 09:57:37">2024/07/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2024/07/14/hello-world/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Hello World">Hello World</span>
+            <span class="post-date" title="2024-07-14 22:05:45">2024/07/14</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-Git-笔记" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">Git 笔记</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="-工具">-工具</a>
+            
+        </span>
+        
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2024-07-15 09:58:27'>2024-07-15 09:57</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Git-%E7%AC%94%E8%AE%B0"><span class="toc-text">Git 笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#git-%E9%85%8D%E7%BD%AE"><span class="toc-text">git 配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF%E9%85%8D%E7%BD%AE"><span class="toc-text">用户信息配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8Bgit%E9%85%8D%E7%BD%AE%E5%91%BD%E4%BB%A4"><span class="toc-text">查看git配置命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%86%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6%E8%BD%AC%E5%8F%98%E4%B8%BAgit%E5%AD%98%E5%82%A8%E5%BA%93"><span class="toc-text">将本地文件转变为git存储库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0track%E7%9A%84%E6%96%87%E4%BB%B6"><span class="toc-text">添加track的文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6"><span class="toc-text">删除文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A6%81git%E5%BF%BD%E7%95%A5%E6%9F%90%E4%BA%9B%E6%96%87%E4%BB%B6%EF%BC%9A"><span class="toc-text">要git忽略某些文件：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git%E6%8F%90%E4%BA%A4%E6%96%87%E4%BB%B6%E7%9A%84%E6%AD%A5%E9%AA%A4"><span class="toc-text">git提交文件的步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8Egit%E5%8C%BA%E5%9F%9F"><span class="toc-text">关于git区域</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8Bgit%E6%97%A5%E5%BF%97"><span class="toc-text">查看git日志</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%94%E5%9B%9E%E7%89%88%E6%9C%AC"><span class="toc-text">返回版本</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#branch"><span class="toc-text">branch</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%88%86%E6%94%AF"><span class="toc-text">创建分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E5%88%86%E6%94%AF%E4%B8%8A%E8%BF%9B%E8%A1%8C%E4%BF%AE%E6%94%B9"><span class="toc-text">在分支上进行修改</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AF"><span class="toc-text">合并分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E5%88%86%E6%94%AF"><span class="toc-text">删除分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E6%94%AF%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93"><span class="toc-text">分支的常用命令总结</span></a></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Git-笔记"><a href="#Git-笔记" class="headerlink" title="Git 笔记"></a>Git 笔记</h1><h2 id="git-配置"><a href="#git-配置" class="headerlink" title="git 配置"></a>git 配置</h2><p>Git 提供了一个叫做 git config 的工具，专门用来配置或读取相应的工作环境变量。</p>
+<p>这些环境变量，决定了 Git 在各个环节的具体工作方式和行为。这些变量可以存放在以下三个不同的地方：</p>
+<ul>
+<li><code>/etc/gitconfig</code> 文件：系统中对所有用户都普遍适用的配置。若使用 <code>git config</code> 时用 <code>--system</code> 选项，读写的就是这个文件。</li>
+<li><code>~/.gitconfig</code> 文件：用户目录下的配置文件只适用于该用户。若使用 <code>git config</code> 时用 <code>--global</code> 选项，读写的就是这个文件。</li>
+<li>当前项目的 Git 目录中的配置文件（也就是工作目录中的 <code>.git/config</code> 文件）：这里的配置仅仅针对当前项目有效。每一个级别的配置都会覆盖上层的相同配置，所以 <code>.git/config</code> 里的配置会覆盖 <code>/etc/gitconfig</code> 中的同名变量。</li>
+</ul>
+<p>在 Windows 系统上，Git 会找寻用户主目录下的 .gitconfig 文件。主目录即 $HOME 变量指定的目录，一般都是 C:\Documents and Settings$USER。</p>
+<p>此外，Git 还会尝试找寻 &#x2F;etc&#x2F;gitconfig 文件，只不过看当初 Git 装在什么目录，就以此作为根目录来定位。</p>
+<h2 id="用户信息配置"><a href="#用户信息配置" class="headerlink" title="用户信息配置"></a>用户信息配置</h2><p>配置个人的用户名称和电子邮件地址：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;runoob&quot;</span><br><span class="line">$ git config --global user.email test@runoob.com</span><br></pre></td></tr></table></figure>
+
+<p>如果用了 <strong>–global</strong> 选项，那么更改的配置文件就是位于你用户主目录下的那个，以后你所有的项目都会默认使用这里配置的用户信息。</p>
+<p>如果要在某个特定的项目中使用其他名字或者电邮，只要去掉 –global 选项重新配置即可，新的设定保存在当前项目的 .git&#x2F;config 文件里。</p>
+<h2 id="查看git配置命令"><a href="#查看git配置命令" class="headerlink" title="查看git配置命令"></a>查看git配置命令</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config -h</span><br></pre></td></tr></table></figure>
+
+<h2 id="将本地文件转变为git存储库"><a href="#将本地文件转变为git存储库" class="headerlink" title="将本地文件转变为git存储库"></a>将本地文件转变为git存储库</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ~/Desktop/cs61a</span><br><span class="line">git init</span><br></pre></td></tr></table></figure>
+
+<p>不使用 Git 管理这个目录</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf .git</span><br></pre></td></tr></table></figure>
+
+<p>查看存储库的状态</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
+
+<h3 id="添加track的文件"><a href="#添加track的文件" class="headerlink" title="添加track的文件"></a>添加track的文件</h3><p>添加所有文件到暂存空间</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add &lt;file&gt;</span><br><span class="line">git add --all  /.</span><br></pre></td></tr></table></figure>
+
+<p>查看（简洁）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status -s</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status --porcelain</span><br></pre></td></tr></table></figure>
+
+<h3 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git rm --cached &lt;file&gt;</span><br><span class="line">-r 递归删除</span><br></pre></td></tr></table></figure>
+
+<h3 id="要git忽略某些文件："><a href="#要git忽略某些文件：" class="headerlink" title="要git忽略某些文件："></a>要git忽略某些文件：</h3><p>创建文本文件 .gitignore 在编辑器里面编辑</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#ignore all .txt files</span><br></pre></td></tr></table></figure>
+
+<p>在 Git 中，你可以通过创建一个名为 <code>.gitignore</code> 的文件来指定哪些文件或目录应该被 Git 忽略。在这个文件中，你可以列出你希望 Git 忽略的模式、文件名或目录名。以下是一些常见的用法：</p>
+<ol>
+<li><p><strong>创建<code>.gitignore</code> 文件：</strong></p>
+<p>在你的项目根目录下创建一个名为 <code>.gitignore</code> 的文件。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">touch</span> .gitignore</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>编辑<code>.gitignore</code> 文件：</strong></p>
+<p>打开 <code>.gitignore</code> 文件并添加你想要忽略的文件或目录。例如，如果你想要忽略所有 <code>.log</code> 文件和一个名为 <code>secret.txt</code> 的文件，<code>.gitignore</code> 文件的内容可能如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">*.log</span><br><span class="line">secret.txt</span><br></pre></td></tr></table></figure>
+
+<p>这表示 Git 应该忽略所有以 <code>.log</code> 结尾的文件以及 <code>secret.txt</code> 文件。</p>
+</li>
+<li><p><strong>保存并提交 <code>.gitignore</code> 文件：</strong></p>
+<p>保存并关闭 <code>.gitignore</code> 文件。然后将 <code>.gitignore</code> 文件添加到 Git 仓库中并提交：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add .gitignore</span><br><span class="line">git commit -m <span class="string">&quot;Add .gitignore to ignore specific files&quot;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>生效：</strong></p>
+<p>从现在开始，Git 将会忽略 <code>.gitignore</code> 文件中列出的文件或目录。如果之前已经将这些文件提交到 Git 仓库，你可能需要使用 <code>git rm --cached</code> 命令将它们从缓存中移除，以便下一次提交时它们不再被追踪。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">rm</span> --cached file_to_ignore</span><br></pre></td></tr></table></figure>
+
+<p>请将 <code>file_to_ignore</code> 替换为实际要忽略的文件名。</p>
+</li>
+</ol>
+<h2 id="git提交文件的步骤"><a href="#git提交文件的步骤" class="headerlink" title="git提交文件的步骤"></a>git提交文件的步骤</h2><ol>
+<li><p><strong>将文件添加到暂存区：</strong></p>
+<p>使用 <code>git add</code> 命令将要提交的文件或目录添加到 Git 的暂存区。例如，要添加所有文件，可以使用以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
+
+<p>如果只想添加特定文件，可以将文件名替换为相应的文件。</p>
+</li>
+<li><p><strong>提交到本地仓库：</strong></p>
+<p>使用 <code>git commit</code> 命令将暂存区的文件提交到本地仓库，并附上一条提交消息：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">&quot;Your commit message here&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>请将 <code>&quot;Your commit message here&quot;</code> 替换为你的实际提交消息。这个消息应该简洁地描述你这次提交的目的。</p>
+</li>
+<li><p><strong>推送到远程仓库（如果需要）：</strong></p>
+<p>如果你的项目与远程仓库关联，并且你希望将本地提交推送到远程仓库，可以使用 <code>git push</code> 命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin branch_name</span><br></pre></td></tr></table></figure>
+
+<p>请将 <code>branch_name</code> 替换为你要推送的分支的名称。</p>
+</li>
+</ol>
+<p>总体而言，提交文件的基本步骤是添加到暂存区，然后提交到本地仓库。如果你和团队一起工作，可能还需要将本地仓库的更改推送到远程仓库。</p>
+<h2 id="关于git区域"><a href="#关于git区域" class="headerlink" title="关于git区域"></a>关于git区域</h2><p>在 Git 中，有三个主要区域用于管理代码的状态，它们是工作目录（Working Directory）、暂存区（Staging Area），以及版本库（Commit）。</p>
+<ol>
+<li><p><strong>Working Directory（工作目录）：</strong></p>
+<ul>
+<li><strong>含义：</strong> 工作目录是你当前正在工作的项目文件夹，包含了你的项目中的所有文件和子目录。</li>
+<li><strong>状态：</strong> 在工作目录中，你可以对文件进行编辑、创建新文件、删除文件等操作。这些更改未被 Git 跟踪，直到你将它们添加到暂存区。</li>
+</ul>
+</li>
+<li><p><strong>Staging Area（暂存区）：</strong></p>
+<ul>
+<li><strong>含义：</strong> 暂存区是一个中间区域，用于暂时存放你希望在下一次提交时包含的更改。</li>
+<li><strong>状态：</strong> 当你使用 <code>git add</code> 命令将文件添加到暂存区时，Git 将记录这些更改，并在下一次提交时将它们包含在版本库中。</li>
+</ul>
+</li>
+<li><p><strong>Commit（版本库）：</strong></p>
+<ul>
+<li><strong>含义：</strong> 版本库是存储项目所有历史记录的地方，包括每一次提交的快照。</li>
+<li><strong>状态：</strong> 当你使用 <code>git commit</code> 命令提交暂存区的更改时，Git 会创建一个新的提交，将暂存区中的更改保存为项目历史的一部分。</li>
+</ul>
+</li>
+</ol>
+<p><strong>工作流程示例：</strong></p>
+<ol>
+<li><p><strong>编辑工作目录中的文件：</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在工作目录中编辑或创建文件</span></span><br><span class="line">nano myfile.txt</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>将修改添加到暂存区：</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将 myfile.txt 添加到暂存区</span></span><br><span class="line">git add myfile.txt</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>提交更改到版本库：</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 提交暂存区的更改到版本库，并附带提交消息</span></span><br><span class="line">git commit -m <span class="string">&quot;Add myfile.txt&quot;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>在整个过程中，文件从工作目录变到暂存区，最后进入版本库，这是 Git 中典型的三个状态：Working Directory -&gt; Staging Area -&gt; Commit。这样的版本控制系统允许你更有序地管理项目的变化。</p>
+<p><code>git rm --cached &lt;file&gt;</code> 和 <code>git restore --staged &lt;file&gt;</code> 都是用于从暂存区中移除文件，但它们有不同的目的和效果。</p>
+<ol>
+<li><p><strong><code>git rm --cached &lt;file&gt;</code>：</strong></p>
+<ul>
+<li><strong>目的：</strong> 用于将文件从工作目录和暂存区中移除，同时保留在工作目录中。</li>
+<li><strong>效果：</strong> 文件会从暂存区中移除，但保留在工作目录中，意味着工作目录中的文件不会被删除。你需要手动删除工作目录中的文件，如果希望从版本控制中移除这个文件。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">rm</span> --cached &lt;file&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong><code>git restore --staged &lt;file&gt;</code>：</strong></p>
+<ul>
+<li><strong>目的：</strong> 用于将文件从暂存区中撤销，保留在工作目录中。</li>
+<li><strong>效果：</strong> 撤销暂存区中对文件的更改，但保留在工作目录中。这使得文件不再处于暂存状态，但仍存在于工作目录，你可以继续在工作目录中对文件进行修改。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git restore --staged &lt;file&gt;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p><strong>总结：</strong></p>
+<ul>
+<li><p>如果你想要从版本控制中完全移除某个文件，包括工作目录中的文件，你应该使用 <code>git rm --cached &lt;file&gt;</code>，并在适当的时候手动删除工作目录中的文件。</p>
+</li>
+<li><p>如果你只是想暂时取消对文件的跟踪并将其从暂存区中撤销，而保留在工作目录中，你可以使用 <code>git restore --staged &lt;file&gt;</code>。</p>
+</li>
+</ul>
+<h2 id="查看git日志"><a href="#查看git日志" class="headerlink" title="查看git日志"></a>查看git日志</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git log</span><br><span class="line">git log --oneline</span><br></pre></td></tr></table></figure>
+
+<p>如果你想要修改 Git 提交日志中某一条具体版本的文本，可以使用 <code>git commit --amend</code> 命令。请注意，这种操作仅适用于你尚未推送（push）到远程仓库的提交。如果你已经推送到远程仓库，应该避免修改提交历史，以免引起问题。</p>
+<p>以下是修改最新一次提交的文本的步骤：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 修改最新一次提交的文本</span></span><br><span class="line">git commit --amend</span><br></pre></td></tr></table></figure>
+
+<p>执行这个命令后，会打开一个文本编辑器，允许你编辑最新一次提交的提交消息。修改完毕后，保存并关闭编辑器。</p>
+<p>如果你想要修改的是更早的提交，可以使用以下步骤：</p>
+<ol>
+<li><p><strong>找到要修改的提交的哈希值：</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></table></figure>
+
+<p>找到你想要修改的提交的哈希值。</p>
+</li>
+<li><p><strong>使用 <code>git rebase</code> 进行交互式重写：</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rebase -i &lt;commit_hash&gt;^</span><br></pre></td></tr></table></figure>
+
+<p><code>&lt;commit_hash&gt;</code> 是你想要修改的提交的哈希值，<code>^</code> 表示你要重写的是该提交之前的提交。</p>
+</li>
+<li><p><strong>在 rebase 窗口中修改提交消息：</strong></p>
+<p>在 rebase 窗口中，将 <code>pick</code> 更改为 <code>reword</code>，保存并关闭编辑器。</p>
+</li>
+<li><p><strong>修改提交消息：</strong></p>
+<p>Git 会打开一个新的编辑器窗口，让你修改提交消息。保存并关闭编辑器。</p>
+</li>
+<li><p><strong>完成 rebase：</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rebase --<span class="built_in">continue</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>请注意，这样的操作可能会改变提交的哈希值，因此如果你已经推送到远程仓库，你将需要进行强制推送，这可能会影响其他协作者。在修改提交历史之前，请确保了解其影响，并在必要时与团队成员协调。</p>
+<h3 id="返回版本"><a href="#返回版本" class="headerlink" title="返回版本"></a>返回版本</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset &lt;hash&gt;</span><br></pre></td></tr></table></figure>
+
+<p>rebase</p>
+<p>git合并操作</p>
+<p>将所有已跟踪的文件的修改和删除添加到暂存区，并提交这些更改到本地仓库，并使用 “manage” 作为提交消息。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -a -m &quot;manage&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="branch"><a href="#branch" class="headerlink" title="branch"></a>branch</h2><p>分支（Branch）是 Git 中用来管理项目开发的重要概念。使用分支可以在不影响主线开发的情况下，独立地进行特性开发、修复 bug 或者尝试新的实验性功能。以下是一个简单的 Git 分支教程：</p>
+<h3 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h3><ol>
+<li><p><strong>查看当前分支：</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
+
+<p>这将显示当前所有的分支，当前分支前面有一个星号。</p>
+</li>
+<li><p><strong>创建新分支：</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch feature-branch</span><br></pre></td></tr></table></figure>
+
+<p>这会创建一个名为 <code>feature-branch</code> 的新分支，但仍然停留在当前分支。</p>
+</li>
+<li><p><strong>切换到新分支：</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout feature-branch</span><br></pre></td></tr></table></figure>
+
+<p>或者（Git 2.23+ 版本）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git switch feature-branch</span><br></pre></td></tr></table></figure>
+
+<p>切换到新创建的 <code>feature-branch</code> 分支。</p>
+<p>或者（Git 2.23+ 版本）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git switch -c feature-branch</span><br></pre></td></tr></table></figure>
+
+<p>这个命令会创建并切换到新分支 <code>feature-branch</code>。</p>
+</li>
+</ol>
+<h3 id="在分支上进行修改"><a href="#在分支上进行修改" class="headerlink" title="在分支上进行修改"></a>在分支上进行修改</h3><p>在 <code>feature-branch</code> 分支上进行修改和提交，这些修改不会影响主分支。</p>
+<h3 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h3><ol>
+<li><p><strong>切回主分支：</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout main</span><br></pre></td></tr></table></figure>
+
+<p>或者（Git 2.23+ 版本）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git switch main</span><br></pre></td></tr></table></figure>
+
+<p>你也可以使用 <code>-c</code> 选项创建并切换到主分支：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git switch -c main</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>合并分支：</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge feature-branch</span><br></pre></td></tr></table></figure>
+
+<p>这将把 <code>feature-branch</code> 分支的更改合并到 <code>main</code> 分支。</p>
+</li>
+</ol>
+<h3 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h3><ol>
+<li><p><strong>删除已合并的分支：</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d feature-branch</span><br></pre></td></tr></table></figure>
+
+<p>这会删除已经合并的 <code>feature-branch</code> 分支。</p>
+</li>
+<li><p><strong>强制删除未合并的分支：</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -D feature-branch</span><br></pre></td></tr></table></figure>
+
+<p>如果分支上的工作还没有合并，使用 <code>-D</code> 选项强制删除。</p>
+</li>
+</ol>
+<h3 id="分支的常用命令总结"><a href="#分支的常用命令总结" class="headerlink" title="分支的常用命令总结"></a>分支的常用命令总结</h3><ul>
+<li><code>git branch</code>: 列出所有分支。</li>
+<li><code>git branch &lt;branch-name&gt;</code>: 创建新分支。</li>
+<li><code>git checkout &lt;branch-name&gt;</code> 或 <code>git switch &lt;branch-name&gt;</code>: 切换分支。</li>
+<li><code>git switch -c &lt;branch-name&gt;</code>: 创建并切换到新分支。</li>
+<li><code>git merge &lt;branch-name&gt;</code>: 合并指定分支到当前分支。</li>
+<li><code>git branch -d &lt;branch-name&gt;</code>: 删除已合并的分支。</li>
+<li><code>git branch -D &lt;branch-name&gt;</code>: 强制删除未合并的分支。</li>
+</ul>
+<p>这是一个简单的 Git 分支教程，涵盖了常见的分支操作。Git 分支是一个非常强大的工具，能够有效地组织和管理项目的开发流程。</p>
+<p>要查看在本地 Git 仓库视角下未被忽略的所有文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git ls-files</span><br></pre></td></tr></table></figure>
+
+<p>想查看某个特定分支的所有文件，可以在命令中加上分支名称：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git ls-files -- &lt;branch_name&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https://github.com/spikenuay/CS61a-fall20.git</span><br><span class="line">git branch -M main</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure>
+
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论。 </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2016-2020 Yelog
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
