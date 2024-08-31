@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Java面试八股文 | spikenauy&#39;s blog</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="Java面试八股文 | spikenauy&#39;s blog">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="JAVA面试题基础语法java基本类型分为八大类型：整数类型：byte，short，int，long	浮点类型：float，double 字符类型：char	布尔类型：boolean  byte：1字节 8位	short：2字节 16位	int：4字节 32位	long：8字节 64位	 float：4字节 32位	double：8字节 64位 char：2字节 16位	boolean：不同jvm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java面试八股文">
+<meta property="og:url" content="http://spikenauy.github.io/2024/09/01/Java%E9%9D%A2%E8%AF%95%E5%85%AB%E8%82%A1%E6%96%87/index.html">
+<meta property="og:site_name" content="spikenauy&#39;s blog">
+<meta property="og:description" content="JAVA面试题基础语法java基本类型分为八大类型：整数类型：byte，short，int，long	浮点类型：float，double 字符类型：char	布尔类型：boolean  byte：1字节 8位	short：2字节 16位	int：4字节 32位	long：8字节 64位	 float：4字节 32位	double：8字节 64位 char：2字节 16位	boolean：不同jvm">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-08-31T17:18:12.000Z">
+<meta property="article:modified_time" content="2024-08-31T17:19:05.048Z">
+<meta property="article:author" content="spikenauy">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>spikenauy</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="rss"
+               href="/atom.xml"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-rss"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="github"
+               href="https://github.com/yelog"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="facebook"
+               href="https://www.facebook.com/faker.tops"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-facebook"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+        
+            <a title="instagram"
+               href="https://www.facebook.com/faker.tops"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-instagram"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="reddit"
+               href="https://www.reddit.com/user/yelog/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-reddit"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="weibo"
+               href="http://weibo.com/u/2307534817"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-weibo"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="jianshu"
+               href="https://www.jianshu.com/u/ff56736de7cf"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-jianshu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="zhihu"
+               href="https://www.zhihu.com/people/jaytp/activities"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-zhihu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+            <a title="oschina"
+               href="https://my.oschina.net/yelog"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-oschina"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+            <a title="email"
+               href="mailto:jaytp@qq.com"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="qq"
+               href="http://wpa.qq.com/msgrd?v=3&uin=872336115&site=qq&menu=yes"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="kugou"
+               href="https://www.kugou.com/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-kugou"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="neteasemusic"
+               href="https://music.163.com/#/user/home?id=88151013"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-neteasemusic"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(3)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="-工具">
+            
+            -工具
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="-面试">
+            
+            -面试
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="-数据库">
+            
+            -数据库
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">关于</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="3">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="全部文章 -面试 "
+           href="/2024/09/01/Java%E9%9D%A2%E8%AF%95%E5%85%AB%E8%82%A1%E6%96%87/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Java面试八股文">Java面试八股文</span>
+            <span class="post-date" title="2024-09-01 01:18:12">2024/09/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 -数据库 "
+           href="/2024/07/15/MySQL%E7%AC%94%E8%AE%B0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="MySQL笔记">MySQL笔记</span>
+            <span class="post-date" title="2024-07-15 10:01:07">2024/07/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 -工具 "
+           href="/2024/07/15/Git-%E7%AC%94%E8%AE%B0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Git 笔记">Git 笔记</span>
+            <span class="post-date" title="2024-07-15 09:57:37">2024/07/15</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-Java面试八股文" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">Java面试八股文</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="-面试">-面试</a>
+            
+        </span>
+        
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2024-09-01 01:19:05'>2024-09-01 01:18</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JAVA%E9%9D%A2%E8%AF%95%E9%A2%98"><span class="toc-text">JAVA面试题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95"><span class="toc-text">基础语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#java%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E5%88%86%E4%B8%BA%E5%85%AB%E5%A4%A7%E7%B1%BB%E5%9E%8B%EF%BC%9A"><span class="toc-text">java基本类型分为八大类型：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="toc-text">面向对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9A"><span class="toc-text">说说面向对象的理解：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4final%E5%85%B3%E9%94%AE%E5%AD%97%EF%BC%9A"><span class="toc-text">说说final关键字：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4static%E4%BF%AE%E9%A5%B0%E7%AC%A6%E7%9A%84%E7%94%A8%E6%B3%95%EF%BC%9A"><span class="toc-text">说说static修饰符的用法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9A"><span class="toc-text">抽象类和接口的区别：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4hashCode-%E5%92%8Cequals-%E7%9A%84%E5%8C%BA%E5%88%AB-%E4%B8%BA%E4%BB%80%E4%B9%88%E9%87%8D%E5%86%99equals-%E5%B0%B1%E8%A6%81%E9%87%8D%E5%86%99hashCode-%EF%BC%9A"><span class="toc-text">说说hashCode()和equals()的区别,为什么重写equals()就要重写hashCode()：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4%E9%87%8D%E8%BD%BD%E7%9A%84%E9%87%8D%E5%86%99%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9A"><span class="toc-text">说说重载的重写的区别：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E8%83%BD%E4%B8%8D%E8%83%BD%E9%87%8D%E5%86%99%EF%BC%9A"><span class="toc-text">说说构造方法能不能重写：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#String"><span class="toc-text">String</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4String%E7%B1%BB-%E4%BB%A5%E5%8F%8Anew%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9B%B4%E6%8E%A5%E9%87%8F%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9A"><span class="toc-text">说说String类,以及new和字符串直接量的区别：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#String%E3%80%81StringBuilder%E3%80%81StringBuffer%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-text">String、StringBuilder、StringBuffer有什么区别？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86"><span class="toc-text">异常处理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4Java%E7%9A%84%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6%EF%BC%9A"><span class="toc-text">说说Java的异常处理机制：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4java%E6%9C%89%E5%93%AA%E4%BA%9B%E5%BC%82%E5%B8%B8%EF%BC%9A"><span class="toc-text">说说java有哪些异常：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#I-O"><span class="toc-text">I&#x2F;O</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4java-IO%E6%B5%81%E5%88%86%E4%B8%BA%E5%87%A0%E7%A7%8D%EF%BC%9F"><span class="toc-text">说说java IO流分为几种？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4BIO%E3%80%81NIO%E3%80%81AIO%EF%BC%9A"><span class="toc-text">说说BIO、NIO、AIO：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%89%E4%BA%86%E5%AD%97%E8%8A%82%E6%B5%81%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E6%9C%89%E5%AD%97%E7%AC%A6%E6%B5%81%EF%BC%9F"><span class="toc-text">有了字节流为什么要有字符流？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4Java%E4%B8%AD%E7%9A%84%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98%EF%BC%9A"><span class="toc-text">说说Java中的编码问题：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4utf-8-%E5%92%8Cutfmb4%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9A"><span class="toc-text">说说utf-8 和utfmb4的区别：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%8F%E5%88%97%E5%8C%96"><span class="toc-text">序列化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4%E5%BA%8F%E5%88%97%E5%8C%96%E3%80%81%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%EF%BC%9A"><span class="toc-text">说说序列化、反序列化：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B"><span class="toc-text">泛型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4%E6%B3%9B%E5%9E%8B%E3%80%81%E7%B1%BB%E5%9E%8B%E6%93%A6%E9%99%A4%EF%BC%9A"><span class="toc-text">说说泛型、类型擦除：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8D%E5%B0%84"><span class="toc-text">反射</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4%E5%AF%B9%E5%8F%8D%E5%B0%84%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9A"><span class="toc-text">说说对反射的理解：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8D%E5%B0%84%E5%9C%A8%E6%A1%86%E6%9E%B6%E5%B7%A5%E5%85%B7%E7%B1%BB%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%EF%BC%9A"><span class="toc-text">反射在框架工具类中的应用场景：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JDK-1-8%E6%96%B0%E7%89%B9%E6%80%A7"><span class="toc-text">JDK 1.8新特性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%B2%E4%B8%80%E4%B8%8BJava-8%E7%9A%84%E6%96%B0%E7%89%B9%E6%80%A7%EF%BC%9A"><span class="toc-text">讲一下Java 8的新特性：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B"><span class="toc-text">Java并发编程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4%E5%A4%9A%E7%BA%BF%E7%A8%8B%EF%BC%9A"><span class="toc-text">说说多线程：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%9A%84%E6%B3%A8%E6%84%8F%E7%82%B9%EF%BC%9A"><span class="toc-text">说说多线程的注意点：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%88%9B%E5%BB%BA%E6%96%B9%E5%BC%8F%EF%BC%9A"><span class="toc-text">说说线程的创建方式：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4%E7%BA%BF%E7%A8%8B%E7%9A%84%E7%8A%B6%E6%80%81%EF%BC%9A"><span class="toc-text">说说线程的状态：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4wait%EF%BC%88%EF%BC%89%E5%92%8Csleep%EF%BC%88%EF%BC%89%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9A"><span class="toc-text">说说wait（）和sleep（）的区别：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4%E6%80%8E%E4%B9%88%E4%BF%9D%E8%AF%81%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%EF%BC%9A"><span class="toc-text">说说怎么保证线程安全：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4%E4%BD%A0%E4%BA%86%E8%A7%A3%E7%9A%84%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5%E6%96%B9%E5%BC%8F%EF%BC%9A"><span class="toc-text">说说你了解的线程同步方式：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4%E4%BD%A0%E4%BA%86%E8%A7%A3%E7%9A%84%E7%BA%BF%E7%A8%8B%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F%EF%BC%9A"><span class="toc-text">说说你了解的线程通信方式：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4Java%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E9%94%81%E5%92%8C%E5%8E%9F%E7%90%86%EF%BC%9A"><span class="toc-text">说说Java中常用的锁和原理：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4synchronized%E5%92%8Clock%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9A"><span class="toc-text">说说synchronized和lock的区别：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4synchronized%E7%9A%84%E5%8E%9F%E7%90%86%EF%BC%9A"><span class="toc-text">说说synchronized的原理：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4%E4%BD%A0%E5%AF%B9AQS%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9A"><span class="toc-text">说说你对AQS的理解：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4%E5%AF%B9%E7%BA%BF%E7%A8%8B%E6%B1%A0%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9A"><span class="toc-text">说说对线程池的理解：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4volatile%E7%9A%84%E7%94%A8%E6%B3%95%E5%92%8C%E5%8E%9F%E7%90%86%EF%BC%9A"><span class="toc-text">说说volatile的用法和原理：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4%E5%AF%B9threadlocal%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9A"><span class="toc-text">说说对threadlocal的理解：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4JUC%EF%BC%9A"><span class="toc-text">说说JUC：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#java%E5%93%AA%E4%BA%9B%E5%9C%B0%E6%96%B9%E7%94%A8%E6%9D%A5CAS%EF%BC%9F"><span class="toc-text">java哪些地方用来CAS？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java%E9%9B%86%E5%90%88"><span class="toc-text">Java集合</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4%E5%AF%B9java%E9%9B%86%E5%90%88%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9A"><span class="toc-text">说说对java集合的理解：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E7%9A%84%E9%9B%86%E5%90%88%EF%BC%9A"><span class="toc-text">说说线程安全的集合：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4HashMap%E7%9A%84%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86%EF%BC%9A"><span class="toc-text">说说HashMap的底层原理：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4HashMap%E5%92%8CHashTable%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9A"><span class="toc-text">说说HashMap和HashTable的区别：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HashMap%E6%98%AF%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E7%9A%84%E5%90%97%EF%BC%9F%E5%A6%82%E6%9E%9C%E4%B8%8D%E6%98%AF%E8%AF%A5%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%EF%BC%9F"><span class="toc-text">HashMap是线程安全的吗？如果不是该如何解决？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4ConcurrentHashMap%EF%BC%9A"><span class="toc-text">说说ConcurrentHashMap：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4%E5%AF%B9ArrayList%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9A"><span class="toc-text">说说对ArrayList的理解：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4ArrayList%E5%92%8CLinkedList%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9A"><span class="toc-text">说说ArrayList和LinkedList有什么区别：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4List%E5%92%8CSet%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9A"><span class="toc-text">说说List和Set的区别：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E5%90%84%E7%A7%8D%E9%9B%86%E5%90%88Null%E5%80%BC%E5%AD%98%E6%94%BE%E9%97%AE%E9%A2%98%EF%BC%9A"><span class="toc-text">关于各种集合Null值存放问题：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#List%E4%B8%80%E8%BE%B9%E9%81%8D%E5%8E%86%E4%B8%80%E9%81%8D%E5%88%A0%E9%99%A4%E6%80%8E%E4%B9%88%E5%AE%9E%E7%8E%B0%EF%BC%9F"><span class="toc-text">List一边遍历一遍删除怎么实现？</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#MySQL%E9%9D%A2%E8%AF%95%E9%A2%98"><span class="toc-text">MySQL面试题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4innodb%E5%92%8Cmyisam%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9A"><span class="toc-text">说说innodb和myisam的区别：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%AE%9A%E4%BD%8D%E6%85%A2%E6%9F%A5%E8%AF%A2%EF%BC%9F"><span class="toc-text">如何定位慢查询？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%88%86%E6%9E%90%E3%80%81%E4%BC%98%E5%8C%96%E4%B8%8D%E5%BF%85%E8%A6%81%E7%9A%84%E5%88%97%EF%BC%9A"><span class="toc-text">如何分析、优化不必要的列：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4%E4%BB%80%E4%B9%88%E6%98%AF%E7%B4%A2%E5%BC%95%EF%BC%9A"><span class="toc-text">说说什么是索引：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4%E7%B4%A2%E5%BC%95%E7%9A%84%E5%88%86%E7%B1%BB%EF%BC%9A"><span class="toc-text">说说索引的分类：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B4%A2%E5%BC%95%E7%9A%84%E5%BA%95%E5%B1%82%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BA%86%E8%A7%A3%E5%90%97%EF%BC%9A"><span class="toc-text">索引的底层数据结构了解吗：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4B%E6%A0%91%E5%92%8CB-%E6%A0%91%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9A"><span class="toc-text">说说B树和B+树的区别：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E8%81%9A%E7%B0%87%E7%B4%A2%E5%BC%95%E4%BB%80%E4%B9%88%E6%98%AF%E9%9D%9E%E8%81%9A%E7%B0%87%E7%B4%A2%E5%BC%95%EF%BC%88%E4%BA%8C%E7%BA%A7%E7%B4%A2%E5%BC%95%EF%BC%89%EF%BC%9F%E4%BB%80%E4%B9%88%E6%98%AF%E5%9B%9E%E8%A1%A8%EF%BC%9F"><span class="toc-text">什么是聚簇索引什么是非聚簇索引（二级索引）？什么是回表？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4%E4%BB%80%E4%B9%88%E6%98%AF%E8%A6%86%E7%9B%96%E6%9F%A5%E8%AF%A2%EF%BC%9F"><span class="toc-text">说说什么是覆盖查询？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MySQL%E8%B6%85%E5%A4%A7%E5%88%86%E9%A1%B5%E6%80%8E%E4%B9%88%E5%A4%84%E7%90%86%EF%BC%9F"><span class="toc-text">MySQL超大分页怎么处理？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4%E4%BA%8B%E5%8A%A1%E7%9A%84%E5%9B%9B%E5%A4%A7%E7%89%B9%E6%80%A7%EF%BC%9A"><span class="toc-text">说说事务的四大特性：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B6%E5%8F%91%E4%BA%8B%E5%8A%A1%E9%97%AE%E9%A2%98%EF%BC%9A"><span class="toc-text">并发事务问题：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4%E4%BA%8B%E5%8A%A1%E7%9A%84%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB%EF%BC%9A"><span class="toc-text">说说事务的隔离级别：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4undo-log%E5%92%8Credo-log%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9A"><span class="toc-text">说说undo log和redo log的区别：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MySQL%E7%9A%84%E4%B8%BB%E4%BB%8E%E5%90%8C%E6%AD%A5%E6%98%AF%E6%80%8E%E4%B9%88%E5%AE%9E%E7%8E%B0%E7%9A%84%EF%BC%9A"><span class="toc-text">MySQL的主从同步是怎么实现的：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8B%E5%8A%A1%E4%B8%AD%E7%9A%84%E9%9A%94%E7%A6%BB%E6%80%A7%E6%98%AF%E6%80%8E%E4%B9%88%E4%BF%9D%E8%AF%81%E7%9A%84%EF%BC%9F%E8%A7%A3%E9%87%8A%E4%B8%80%E4%B8%8BMVCC"><span class="toc-text">事务中的隔离性是怎么保证的？解释一下MVCC</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Redis%E9%9D%A2%E8%AF%95%E9%A2%98"><span class="toc-text">Redis面试题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Redis%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-text">Redis使用场景</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="JAVA面试题"><a href="#JAVA面试题" class="headerlink" title="JAVA面试题"></a>JAVA面试题</h1><h2 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h2><h3 id="java基本类型分为八大类型："><a href="#java基本类型分为八大类型：" class="headerlink" title="java基本类型分为八大类型："></a>java基本类型分为八大类型：</h3><p>整数类型：byte，short，int，long	浮点类型：float，double</p>
+<p>字符类型：char	布尔类型：boolean </p>
+<p>byte：1字节 8位	short：2字节 16位	int：4字节 32位	long：8字节 64位	</p>
+<p>float：4字节 32位	double：8字节 64位</p>
+<p>char：2字节 16位	boolean：不同jvm有不同的实现</p>
+<h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><h3 id="说说面向对象的理解："><a href="#说说面向对象的理解：" class="headerlink" title="说说面向对象的理解："></a>说说面向对象的理解：</h3><ul>
+<li>面向对象包含三大基本特征：封装，继承，多态</li>
+<li>封装：将对象的状态信息隐藏在对象内部，外部不能直接访问对象内部信息，使用者通过对象提供的方法堆内部的信息操作和访问，提高了代码的可维护性</li>
+<li>继承：是实现代码复用的手段，通过extends实现类的继承，被继承的类叫做父类，实现继承的类叫做子类。</li>
+<li>多态：多态的实现离不开继承，在程序中，将参数的数据类型设置为父类，在调用程序的时候，根据情况传入某个子类的实例，这样就实现了多态。程序会根据类型的不同，做出不同的处理反馈</li>
+<li>子类可以重写父类的方法，或者实现抽象类或接口的方法</li>
+</ul>
+<h3 id="说说final关键字："><a href="#说说final关键字：" class="headerlink" title="说说final关键字："></a>说说final关键字：</h3><ul>
+<li>final可以用来修饰变量、方法、类</li>
+<li>修饰变量的时候，该变量在被初始化后不能被修改，如果是修饰引用类型则引用的地址不能改变但是值可以改变</li>
+<li>修饰方法的时候，该方法不能被重写</li>
+<li>修饰类的时候，该类不能被继承</li>
+</ul>
+<h3 id="说说static修饰符的用法："><a href="#说说static修饰符的用法：" class="headerlink" title="说说static修饰符的用法："></a>说说static修饰符的用法：</h3><ul>
+<li>static是用来修饰类中的成员变量、方法、代码块、内部类</li>
+<li>static修饰的变量属于静态变量，也叫类变量，属于类而不是实例，可以通过类名访问</li>
+<li>修饰的方法属于静态方法，一个类中的静态方法不能访问实例变量，只能访问静态变量</li>
+<li>静态代码块，可以在类加载的时候执行静态初始化操作</li>
+<li>static修饰的内部类，可以访问外部类的静态成员，但是不能访问非静态成员</li>
+</ul>
+<h3 id="抽象类和接口的区别："><a href="#抽象类和接口的区别：" class="headerlink" title="抽象类和接口的区别："></a>抽象类和接口的区别：</h3><ul>
+<li>相同点：两者都不能被实例化</li>
+<li>抽象类定义的关键字是abstract class，接口的关键字是interface </li>
+<li>抽象类可以有静态变量、成员变量、常量，接口只能有常量</li>
+<li>抽象方法可以有构造方法和普通方法。但是接口在jdk1.8之前，只能有抽象方法，之后可以有默认方法和静态方法。</li>
+<li>一个类只可以继承一个抽象类，但是可以实现多个接口。一个接口也可以继承多个父接口</li>
+<li>抽象方法在业务中更像一个模板，有自己的基本功能，同时提供优化补充的方式</li>
+<li>接口更像一种规范和要求，定义参数和返回值，要按照接口的规范实现</li>
+</ul>
+<h3 id="说说hashCode-和equals-的区别-为什么重写equals-就要重写hashCode-："><a href="#说说hashCode-和equals-的区别-为什么重写equals-就要重写hashCode-：" class="headerlink" title="说说hashCode()和equals()的区别,为什么重写equals()就要重写hashCode()："></a>说说hashCode()和equals()的区别,为什么重写equals()就要重写hashCode()：</h3><ul>
+<li>hashCode()：获取哈希码，equals()：比较两个对象是否相等。 </li>
+<li>二者两个约定：如果两个对象相等,它们必须有相同的哈希码；若两个对象的哈希码相同,他们却不一定相等。也就是说,equals()比较两个对象相等时hashCode()一定相等,hashCode()相等的两个对象equqls()不一定相等。 </li>
+<li>加分回答：由于hashCode()与equals()具有联动关系,equals()重写时,hashCode()进行重写,使得这两个方法始终满足相关的约定。</li>
+<li>可以关联HashMap说说</li>
+</ul>
+<h3 id="说说重载的重写的区别："><a href="#说说重载的重写的区别：" class="headerlink" title="说说重载的重写的区别："></a>说说重载的重写的区别：</h3><ul>
+<li>重载是发生在同一个类中，重写是发生在子类当中</li>
+<li>重载要求方法名相同，但是返回类型，参数，访问修饰符可以不同</li>
+<li>重写要求方法名，返回结果，参数都相同，并且子类重写方法的访问修饰符不能大于父类，如果父类的访问修饰符为private，则子类不能重写此方法</li>
+</ul>
+<h3 id="说说构造方法能不能重写："><a href="#说说构造方法能不能重写：" class="headerlink" title="说说构造方法能不能重写："></a>说说构造方法能不能重写：</h3><ul>
+<li>构造方法在一个类中可以有多个，多个构造器的形参列表不同，可以称作构造器重载，让java类包含了多个初始化逻辑。</li>
+<li>构造方法不能被重写，因为重写要求子类和父类的方法名一样，但是不同类的类名是不同的，构造方法是需要和类同名，所以不能重写。</li>
+</ul>
+<h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><h3 id="说说String类-以及new和字符串直接量的区别："><a href="#说说String类-以及new和字符串直接量的区别：" class="headerlink" title="说说String类,以及new和字符串直接量的区别："></a>说说String类,以及new和字符串直接量的区别：</h3><ul>
+<li>String类是java常用的API，其中有很多封装好的处理字符串的方法，比如charAt 查找索引处的字符、indexOf查询字符首次出现的位置、subString截取字符串等方法</li>
+<li>String的特点有不可变性，一旦被创建其内容就无法被更改，然后对字符串的修改都会产生一个新的String对象</li>
+<li>String是被final修饰的，不能被继承</li>
+<li>创建字符串有两种方式：用字符串常量创建的时候，JVM会检查字符串池中是否存在相同内容的字符串，如果有则返回这个字符串的引用</li>
+<li>如果使用new来创建字符串，则不会去检查字符串池，直接在堆内存创建新的String对象</li>
+</ul>
+<h3 id="String、StringBuilder、StringBuffer有什么区别？"><a href="#String、StringBuilder、StringBuffer有什么区别？" class="headerlink" title="String、StringBuilder、StringBuffer有什么区别？"></a>String、StringBuilder、StringBuffer有什么区别？</h3><ul>
+<li>String类是不可变的，一旦创建字符串内容不能修改，所有修改的字符串会创建为新的字符串对象，这使得String在多线程的环境下是安全的</li>
+<li>StringBuilder类，可变字符序列，操作不被synchronized修饰，性能优于StringBuffer，但是线程不安全</li>
+<li>StringBuffer类，也是可变字符串序列，修改字符串不会创建新的对象，操作中使用了同步机制，加了锁，性能不如StringBuilder</li>
+</ul>
+<h2 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h2><h3 id="说说Java的异常处理机制："><a href="#说说Java的异常处理机制：" class="headerlink" title="说说Java的异常处理机制："></a>说说Java的异常处理机制：</h3><ul>
+<li>异常机制让程序具有容错性和健壮性，程序允许出现错误时，系统会生成一个Exception对象来通知程序</li>
+<li>处理异常的语句由 try，catch，finally 组成，try用于包裹业务代码，catch块用于捕获并处理某个类型的异常，finally则是用于回收资源，是最后会执行的代码</li>
+<li>如果程序出现异常，系统会创建一个异常类，提交给JVM，JVM寻找可以处理这个异常的catch块，交给这个块来处理，当JVM没有找到的时候，允许环境终止，java程序退出</li>
+<li>java也允许程序主动抛出异常，当业务中用判断符合某项错误的条件成立的时候，可以用throw关键字向外抛出异常</li>
+</ul>
+<h3 id="说说java有哪些异常："><a href="#说说java有哪些异常：" class="headerlink" title="说说java有哪些异常："></a>说说java有哪些异常：</h3><ul>
+<li>主要分为受检异常Checked Exception和非受检异常Unchecked Exception，还有严重错误Error</li>
+<li>Checked Exception 受检异常是表示程序允许时可能遇到的异常，需要通过try catch显式处理，通常表示外部环境的问题，比如：IOExpection、SQLException、ClassNotFoundException</li>
+<li>非受检异常，也叫runtimeException，是程序逻辑错误引起的，比如：NullPointerException、ArrayIndexOutOfBoundsException、ClassCastException</li>
+<li>Error严重错误，这些错误不需要捕获和处理，比如：OutOfMemoryError，StackoverflowError</li>
+</ul>
+<h2 id="I-O"><a href="#I-O" class="headerlink" title="I&#x2F;O"></a>I&#x2F;O</h2><h3 id="说说java-IO流分为几种？"><a href="#说说java-IO流分为几种？" class="headerlink" title="说说java IO流分为几种？"></a>说说java IO流分为几种？</h3><ul>
+<li>Java IO是Java提供处理数据输入和输出的API</li>
+<li>根据数据流方向：<ul>
+<li>输入流 Input Stream、Writer：从源 比如文件、网络中读取到程序</li>
+<li>输出流 Output Stream、Reader：将数据从程序中写出到外部文件，比如文件、网络、控制台</li>
+<li>以上分别是用于读取 和写入的抽象类，其他的具体流类都是它们的实现类</li>
+</ul>
+</li>
+<li>根据处理数据单位：<ul>
+<li>字节流 Byte Streams：以字节为单位读写数据，主要用于处理二进制数据，比如音频、图像文件等 ：Input Stream、Output Stream</li>
+<li>字符流 Character Streams：以字符为单位读写数据，主要处理文本数据：Writer、Reader</li>
+</ul>
+</li>
+<li>在 Java I&#x2F;O 中，<code>FileInputStream</code>、<code>ByteArrayInputStream</code>、<code>BufferedInputStream</code> 是字节流，用于处理二进制数据。</li>
+<li><code>FileInputStream</code> 用于从文件中读取字节数据，<code>ByteArrayInputStream</code> 从内存中的字节数组读取数据，而 <code>BufferedInputStream</code> 提供缓冲功能以提高读取效率。</li>
+<li>字符流包括 <code>FileReader</code>、<code>BufferedReader</code>、<code>InputStreamReader</code>，其中 <code>FileReader</code> 用于读取文本文件，<code>BufferedReader</code> 增加了按行读取的功能并提供缓冲，而 <code>InputStreamReader</code> 则将字节流转换为字符流，用于处理带有字符编码的数据源。</li>
+</ul>
+<p>完整回答：</p>
+<p>“Java IO是Java中用于处理数据输入和输出的API。根据数据流的方向，Java IO分为输入流和输出流。输入流（如<code>InputStream</code>和<code>Reader</code>）用于从外部源读取数据到程序中，而输出流（如<code>OutputStream</code>和<code>Writer</code>）则将数据从程序写出到外部目标。</p>
+<p>按处理的数据单位，Java IO分为字节流和字符流。字节流以字节为单位读写数据，主要用于处理二进制数据，比如音频或图像文件。<code>InputStream</code>和<code>OutputStream</code>是字节流的抽象类，常见的具体实现包括<code>FileInputStream</code>用于从文件中读取字节数据，<code>ByteArrayInputStream</code>用于从内存中的字节数组读取数据，而<code>BufferedInputStream</code>提供缓冲功能以提高读取效率。</p>
+<p>字符流则以字符为单位读写数据，主要用于处理文本。<code>Reader</code>和<code>Writer</code>是字符流的抽象类，具体实现包括<code>FileReader</code>用于读取文本文件，<code>BufferedReader</code>增加了按行读取的功能并提供缓冲，而<code>InputStreamReader</code>则将字节流转换为字符流，便于处理带有字符编码的数据源。”</p>
+<h3 id="说说BIO、NIO、AIO："><a href="#说说BIO、NIO、AIO：" class="headerlink" title="说说BIO、NIO、AIO："></a>说说BIO、NIO、AIO：</h3><ul>
+<li>BIO是blocking IO，是传统的Java I&#x2F;O操作系统，基于阻塞I&#x2F;O实现。每个请求都有一个独立的线程来处理，线程会阻塞等待数据读写操作完成，简单易用，高并发下性能较差</li>
+<li>NIO是非阻塞IO，用户线程发送请求后，可以做其他工作，并且通过轮询的方式不断询问内核数据，但在数据复制阶段，用户线程仍然数据阻塞状态。适合高并发环境</li>
+<li>BIO和NIO都属于同步IO</li>
+<li>AIO是异步IO模式，用户线程发送请求后，内核会返回一个回调函数，不包含数据，之后用户线程可以处理其他操作，当数据准备好后，内核会将数据发送给用户线程，不必向同步IO中用户线程自己去读取</li>
+<li>BIO只能处理一个请求，NIO可以处理多个请求，</li>
+</ul>
+<h3 id="有了字节流为什么要有字符流？"><a href="#有了字节流为什么要有字符流？" class="headerlink" title="有了字节流为什么要有字符流？"></a>有了字节流为什么要有字符流？</h3><ul>
+<li>字符流是JVM将字节转换得到的，这个转换过程耗时，而且不知道编码类型容易出现乱码问题</li>
+<li>所以IO直接提供一个操作字符的接口，自动处理字符编码和解码，字符流支持字符集编码转换，可以增强处理多语言字符</li>
+</ul>
+<h3 id="说说Java中的编码问题："><a href="#说说Java中的编码问题：" class="headerlink" title="说说Java中的编码问题："></a>说说Java中的编码问题：</h3><ul>
+<li>Java中常见的字符编码有iso、utf-8、gbk</li>
+<li>iso是一种单字节编码，适用于英文等西欧语言，如果这个编码格式显示中文会乱码</li>
+<li>utf-8是一种可变长度字符编码，用于表示Unicode字符集，兼容ASCII，可以表示世界上几乎所有的语言，</li>
+<li>GBK在处理中文字符更加高效，如果是一下旧版中文系统，可以使用这个</li>
+</ul>
+<h3 id="说说utf-8-和utfmb4的区别："><a href="#说说utf-8-和utfmb4的区别：" class="headerlink" title="说说utf-8 和utfmb4的区别："></a>说说utf-8 和utfmb4的区别：</h3><ul>
+<li>UTF-8和UTF-8MB4的主要区别在于编码范围和存储能力</li>
+<li>UTF-8最多使用3个字节存储一个字符，适用于大部分普通文本</li>
+<li>UTF-8MB4最多使用4个字节，能够存储所有的Unicode字符，包括表情符号和特殊符号。</li>
+<li>对于需要存储表情符号或扩展字符的应用场景，UTF-8MB4是更好的选择。</li>
+</ul>
+<h2 id="序列化"><a href="#序列化" class="headerlink" title="序列化"></a>序列化</h2><h3 id="说说序列化、反序列化："><a href="#说说序列化、反序列化：" class="headerlink" title="说说序列化、反序列化："></a>说说序列化、反序列化：</h3><ul>
+<li>序列化是将对象转换为字节流的过程，可以将对象存储或传输到文件或者通过网络传输</li>
+<li>反序列化是将字节流还原为对象的过程</li>
+<li>再Java中通过实现Serializable接口启用对象的序列化</li>
+<li>通过ObjectOutputStream将对象写入到文件或其他输入流中</li>
+<li>通过ObjectInputStream从文件中读取输入流读取对象，将字节流转换为对象（用强制转换 读取objectInputStream.readstream()）</li>
+<li>Json 序列化：这个可能是我们最常用的序列化方式，Json 序列化的选择很多，一般会使用 jackson 包，通过 ObjectMapper 类来进行一些操作，比如将对象转化为 byte 数组或者将 json 串转化为对象。</li>
+</ul>
+<h2 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h2><h3 id="说说泛型、类型擦除："><a href="#说说泛型、类型擦除：" class="headerlink" title="说说泛型、类型擦除："></a>说说泛型、类型擦除：</h3><ul>
+<li>在JDK1.5中，引入了泛型，在没有泛型之前，每次从集合中读取对象都必须进行类型转换，如果在插入对象时，类型出错，那么运行时转换处理的阶段就出错</li>
+<li>在引入泛型之后，可以明确指定集合接受哪些对象类型，编译器就能知道并且自动为插入的代码进行泛化，在编译阶段如果插入类型错误的对象就会报错</li>
+<li>泛型擦除，java泛型时伪泛型，因为java代码在编译阶段，所有的泛型信息都会被擦除，生成的字节码文件是不包含泛型信息的</li>
+</ul>
+<h2 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h2><h3 id="说说对反射的理解："><a href="#说说对反射的理解：" class="headerlink" title="说说对反射的理解："></a>说说对反射的理解：</h3><ul>
+<li>反射是在程序运行的时候动态的获取对象的属性和方法的功能叫做反射。它能够在程序运行期间，对于任意一个类都能知道它的所有方法和属性。</li>
+<li>可以在不知道类具体实现的情况下创建类实例、调用方法、访问属性。</li>
+<li>反射在框架、工具类库等方面由广泛的应用</li>
+</ul>
+<h3 id="反射在框架工具类中的应用场景："><a href="#反射在框架工具类中的应用场景：" class="headerlink" title="反射在框架工具类中的应用场景："></a>反射在框架工具类中的应用场景：</h3><ul>
+<li>Spring框架中的依赖注入，通过反射，Spring容器可以在运行的时候，动态的实例化Bean，并将其注入到其他Bean中。Spring通过扫描类路径获取注解，比如：@AutoWired、@Component，然后通过反射创建对象、设置属性、调用方法</li>
+<li>使用JDBC时，如果要创建数据库的连接，需要先通过反射机制，加载数据库的驱动程序</li>
+<li>面向切面编程AOP的实现方案，是在程序运行时创建目标对象的代理类</li>
+</ul>
+<h2 id="JDK-1-8新特性"><a href="#JDK-1-8新特性" class="headerlink" title="JDK 1.8新特性"></a>JDK 1.8新特性</h2><h3 id="讲一下Java-8的新特性："><a href="#讲一下Java-8的新特性：" class="headerlink" title="讲一下Java 8的新特性："></a>讲一下Java 8的新特性：</h3><p><strong>Lambda 表达式</strong> − Lambda 允许把函数作为一个方法的参数（函数作为参数传递到方法中）。   </p>
+<p>​    <strong>方法引用</strong> − 方法引用提供了非常有用的语法，可以直接引用已有Java类或对象（实例）的方法或构造器。与lambda联合使用，方法引用可以使语言的构造更紧凑简洁，减少冗余代码。   </p>
+<p>​    <strong>默认方法</strong> − 默认方法就是一个在接口里面有了一个实现的方法。   </p>
+<p>​    <strong>新工具</strong> − 新的编译工具，如：Nashorn引擎 jjs、 类依赖分析器jdeps。   </p>
+<p>​    <strong>Stream API</strong> −新添加的Stream API（java.util.stream） 把真正的函数式编程风格引入到Java中。   </p>
+<p>​    <strong>Date Time API</strong> − 加强对日期与时间的处理。   </p>
+<p>​    <strong>Optional 类</strong> − Optional 类已经成为 Java 8 类库的一部分，用来解决空指针异常。   </p>
+<p>​    <strong>Nashorn, JavaScript 引擎</strong> − Java 8提供了一个新的Nashorn javascript引擎，它允许我们在JVM上运行特定的javascript应用。</p>
+<h2 id="Java并发编程"><a href="#Java并发编程" class="headerlink" title="Java并发编程"></a>Java并发编程</h2><h3 id="说说多线程："><a href="#说说多线程：" class="headerlink" title="说说多线程："></a>说说多线程：</h3><ul>
+<li>线程是操作系统调度的最小单元，它可以让进程并发的处理多个任务</li>
+<li>一个进程可以创建多个线程，各个线程共享程序的内存空间，比如代码段，多个线程可以执行相同的代码；</li>
+<li>共享数据段，多个线程可以访问或修改相同的全局变量或静态变量；</li>
+<li>共享堆空间，堆是动态分配内存的区域，通常分配对象的内存，多个线程可以创建、访问和修改堆中的对象；</li>
+<li>每个线程拥有自己的栈空间</li>
+<li>多线程的优点：减少程序响应时间，提高cpu利用率，数据共享效率高</li>
+</ul>
+<h3 id="说说多线程的注意点："><a href="#说说多线程的注意点：" class="headerlink" title="说说多线程的注意点："></a>说说多线程的注意点：</h3><ul>
+<li>线程安全方面，多个线程同时访问共享资源时，可能导致数据不一致。可以使用synchronized或lock加锁来确保线程安全</li>
+<li>频繁创建和销毁线程会浪费系统资源，使用线程池来管理线程可以重用线程，减少线程的开销</li>
+</ul>
+<h3 id="说说线程的创建方式："><a href="#说说线程的创建方式：" class="headerlink" title="说说线程的创建方式："></a>说说线程的创建方式：</h3><ul>
+<li>创建线程有三种方式：继承thread类、实现Runable接口、实现Callable接口</li>
+<li>定义Thread类的子类，重写run方法，创建这个子类的实例，调用线程对象的start（）方法来启动这个线程</li>
+<li>实现Runable接口，实现接口的run（）方法，创建实现类的实例，将其作为参数来创建Thread对象，调用start（）方法来启动线程</li>
+<li>实现Callable接口，重写call方法，call方法为线程的执行体，创建Callable实现类的实例，以该实例为参数，创建FutureTask对象。使用FutureTask对象作为参数，创建Thread对象启动线程，调用FutureTask对象的get（）方法，获得子线程结束的返回值</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyThread</span> <span class="keyword">extends</span> <span class="title class_">Thread</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Thread running using Thread class.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">MyThread</span> <span class="variable">thread</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">MyThread</span>();</span><br><span class="line">        thread.start(); <span class="comment">// 启动线程</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyRunnable</span> <span class="keyword">implements</span> <span class="title class_">Runnable</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Thread running using Runnable interface.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Thread</span> <span class="variable">thread</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Thread</span>(<span class="keyword">new</span> <span class="title class_">MyRunnable</span>());</span><br><span class="line">        thread.start(); <span class="comment">// 启动线程</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyCallable</span> <span class="keyword">implements</span> <span class="title class_">Callable</span>&lt;String&gt; &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">call</span><span class="params">()</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Thread result from Callable.&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        FutureTask&lt;String&gt; futureTask = <span class="keyword">new</span> <span class="title class_">FutureTask</span>&lt;&gt;(<span class="keyword">new</span> <span class="title class_">MyCallable</span>());</span><br><span class="line">        <span class="type">Thread</span> <span class="variable">thread</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Thread</span>(futureTask);</span><br><span class="line">        thread.start(); <span class="comment">// 启动线程</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="type">String</span> <span class="variable">result</span> <span class="operator">=</span> futureTask.get(); <span class="comment">// 获取返回结果</span></span><br><span class="line">            System.out.println(result);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (InterruptedException | ExecutionException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>创建线程分为两种：继承父类、实现接口</li>
+<li>实现Runable接口和Callable接口创建线程的区别是：Runable没有返回值。但是Callable有返回值</li>
+<li>采用接口方式创建线程的优点是：线程类可以继承别的其他类。</li>
+<li>如果采用继承Thread类，就不可以继承其他的父类</li>
+</ul>
+<h3 id="说说线程的状态："><a href="#说说线程的状态：" class="headerlink" title="说说线程的状态："></a>说说线程的状态：</h3><ul>
+<li>java线程在运行的生命周期中，有六个状态：</li>
+<li>NEW：初始状态，线程被创建，但是没有调用start方法</li>
+<li>RUNABLE：可运行状态，线程正在JVM执行，可能是等待操作系统的调度</li>
+<li>BLOCKED：阻塞状态，线程正在等待获取监视器锁，当一个线程试图进入一个 <code>synchronized</code> 方法或代码块，而此时该对象的监视器锁已经被其他线程占用，这个线程就会进入阻塞状态，等待监视器锁的释放。</li>
+<li>WATING：等待状态，线程正在等待其他线程的的操作来继续执行，当一个线程调用某个对象的 <code>wait()</code> 方法时，线程会释放该对象的监视器锁，并进入 WAITING 状态，直到另一个线程调用该对象的 <code>notify()</code> 或 <code>notifyAll()</code> 方法来唤醒它。</li>
+<li>TIMED_WATING：超时等待状态，在等待状态的基础上增加了超时时间，即超出时间自动返回。</li>
+<li>TERMINATED：终止状态，线程已经执行完毕</li>
+</ul>
+<h3 id="说说wait（）和sleep（）的区别："><a href="#说说wait（）和sleep（）的区别：" class="headerlink" title="说说wait（）和sleep（）的区别："></a>说说wait（）和sleep（）的区别：</h3><ul>
+<li>wait是object类的方法，而sleep是Thread类的方法</li>
+<li>wait（）调用的时候会释放当前线程的锁，其他线程可以进入同步代码块或方法，而sleep（）不会释放锁，线程只是暂停执行，但是仍然持有锁</li>
+<li>wait（）通常在同步块或方法中使用，目的是让当前线程等待，直到其他线程调用notify（）或notify All（）</li>
+<li>sleep（）只是让线程休眠一段时间，不涉及锁和同步</li>
+</ul>
+<h3 id="说说怎么保证线程安全："><a href="#说说怎么保证线程安全：" class="headerlink" title="说说怎么保证线程安全："></a>说说怎么保证线程安全：</h3><ul>
+<li><p>线程安全是在多线程中，线程没有按照预期执行，导致操作共享变量出现异常。在java中有多种同步方案可以使用：原子类、volatile关键字、锁</p>
+</li>
+<li><p>原子类：基于底层CAS，比较和替换机制，比较要更新的值是否等于预期值。<code>AtomicInteger</code>、<code>AtomicReference</code>，通过原子操作确保线程安全，避免锁的开销。</p>
+</li>
+<li><p>volatile关键字：适用于确保变量的可见性，但它不保证操作的原子性</p>
+</li>
+<li><p>使用synchronized关键字，可以在方法或代码块上使用，确保同一时间只有一个线程可以访问                 </p>
+</li>
+<li><p>使用Lock锁：通过lock、unlock方法所住一段代码</p>
+</li>
+</ul>
+<h3 id="说说你了解的线程同步方式："><a href="#说说你了解的线程同步方式：" class="headerlink" title="说说你了解的线程同步方式："></a>说说你了解的线程同步方式：</h3><ul>
+<li>java主要通过加锁的方式实现线程同步，锁分为两种：synchronized和Lock</li>
+<li>synchronized可以加在三个位置：</li>
+<li>加在普通方法上的时候，锁的是这个方法的实例对象；加在静态方法上，锁的是当前类的对象；加在代码块上时，要在synchronized后显式指定一个对象，当一个线程要进入这个代码块，必须要先获得这个对象的锁 </li>
+<li>synchronized是比较早期的API，没有超时等机制</li>
+<li>Lock支持的功能包括：支持响应中断、支持超时机制、支持以非阻塞的方式获取锁、支持多个条件变量（阻塞队列）</li>
+</ul>
+<h3 id="说说你了解的线程通信方式："><a href="#说说你了解的线程通信方式：" class="headerlink" title="说说你了解的线程通信方式："></a>说说你了解的线程通信方式：</h3><ul>
+<li>包括使用wait&#x2F;notify进行简单的同步，Lock和Condition提供更灵活的控制，</li>
+<li>ThreadLocal为线程提供独立的变量存储</li>
+</ul>
+<h3 id="说说Java中常用的锁和原理："><a href="#说说Java中常用的锁和原理：" class="headerlink" title="说说Java中常用的锁和原理："></a>说说Java中常用的锁和原理：</h3><ul>
+<li>synchronized关键字和lock锁接口：</li>
+<li>synchronized关键字底层用的是java对象头来存储锁信息</li>
+<li>lock接口是基于AQS实现，AQS内部是一个先进先出队列实现锁的同步，同时定义了同步状态记录锁的信息</li>
+</ul>
+<h3 id="说说synchronized和lock的区别："><a href="#说说synchronized和lock的区别：" class="headerlink" title="说说synchronized和lock的区别："></a>说说synchronized和lock的区别：</h3><ul>
+<li>synchronized是同步锁，可以修饰普通方法、静态方法、代码块</li>
+<li>修饰普通方法，锁住的是实例对象；修饰静态方法时，锁住的是类对象；修饰代码块的时候，是要指定一个对象，然后锁住</li>
+<li>当一个线程在使用被锁住的方法时，获取了它的锁，其他线程想要访问当前资源只能等待当前锁释放锁</li>
+<li>synchronized是java的关键字，lock是接口</li>
+<li>synchronized可以作用在代码块和方法上，lock只能用在代码里</li>
+<li>synchronized在代码执行完毕或出现异常会自动释放锁，但是lock不会自动释放，需要在finally中释放</li>
+<li>synchronized会导致线程拿不到锁一直等待，死锁。但是lock可以设置超时时间，如果在指定时间内无法获取锁，线程可以选择退出或执行其他操作</li>
+<li>synchronized无法知道是否获取锁成功，但是lock可以通过tryLock判断是否加锁成功</li>
+</ul>
+<h3 id="说说synchronized的原理："><a href="#说说synchronized的原理：" class="headerlink" title="说说synchronized的原理："></a>说说synchronized的原理：</h3><ul>
+<li>原理是通过JVM在编译生成的 monitorenter 和 monitorexit 指令来实现</li>
+<li>这些指令利用Java对象头中的锁信息来管理锁的获取和释放</li>
+<li>当线程进入或者退出同步代码块的时候，会自动获取和释放对象的监视器锁，从而实现线程的同步控制</li>
+</ul>
+<h3 id="说说你对AQS的理解："><a href="#说说你对AQS的理解：" class="headerlink" title="说说你对AQS的理解："></a>说说你对AQS的理解：</h3><ul>
+<li>AQS队列同步器，用来构建锁的基本框架，Lock实现类都是基于AQS实现的</li>
+<li>AQS是基于模板方法模式进行设计的，锁的实现需要继承AQS并重写指定的方法</li>
+<li>AQS内部定义了一个先进先出的队列来实现线程的同步，同时还定义了同步状态来记录锁的信息</li>
+</ul>
+<h3 id="说说对线程池的理解："><a href="#说说对线程池的理解：" class="headerlink" title="说说对线程池的理解："></a>说说对线程池的理解：</h3><ul>
+<li>线程池可以管理线程的数量，减少无节制的创建线程导致超出系统负荷。</li>
+<li>可以让线程复用，大大减少创建和销毁线程所带来的开销</li>
+<li>线程池管理了多个线程的生命周期，提供了任务的提交和调度机制，减少线程上下文切换的开销</li>
+<li>线程池的生命周期分为五种：</li>
+<li>RUNING -1：线程可以接受新任务并处理队列中的任务</li>
+<li>SHUTDOWN 0：线程池不再接收新的任务，但是会继续处理队列中的任务</li>
+<li>STOP 1：线程不在接受新的任务，也不再处理队列中的任务，并中断正在执行的任务</li>
+<li>TIDYING 2：所有任务都终止，线程池工作的线程数都为0，即将调用terminated（）方法</li>
+<li>TEMINATED 3：teminated（）方法调用完毕，线程池完全终止</li>
+</ul>
+<h3 id="说说volatile的用法和原理："><a href="#说说volatile的用法和原理：" class="headerlink" title="说说volatile的用法和原理："></a>说说volatile的用法和原理：</h3><ul>
+<li>volatile是一个轻量级的synchronized，它可以在多线程中确保共享变量的可见性。保证一个线程修改一个共享变量的时候，另外一个线程可以读取整个修改的值</li>
+<li>底层原理是通过内存屏障（Memory Barrier）来实现的，读写 <code>volatile</code> 变量时会在指令前后插入内存屏障，确保变量的可见性和有序性，但不保证原子性。常用于避免多线程中变量不一致问题，如双重检查锁定的单例模式中。</li>
+</ul>
+<h3 id="说说对threadlocal的理解："><a href="#说说对threadlocal的理解：" class="headerlink" title="说说对threadlocal的理解："></a>说说对threadlocal的理解：</h3><ul>
+<li>ThreadLocal，线程变量，是一种为每个线程提供独立的变量副本，确保每个线程对变量的访问互不打扰，避免线程之间共享数据问题，也叫不需要同步机制了</li>
+<li>提供线程变量，可以存储线程私有的状态和上下文信息，比如用户会话</li>
+<li>实现原理：每个Thread对象中都有一个ThreadLocalMap对象，他是一个键值对形式的容器，可以用set、get方法存取共享变量。</li>
+<li>ThreadLocal对象作为key来存取共享变量，用完之后必须remove，否则会造成内存泄漏</li>
+<li>在线程池中，线程不会在任务结束后立即销毁，而是重用。若 <code>ThreadLocal</code> 未被清除，它对应的值可能无法释放，累积后导致内存泄漏。</li>
+</ul>
+<h3 id="说说JUC："><a href="#说说JUC：" class="headerlink" title="说说JUC："></a>说说JUC：</h3><ul>
+<li>JUC是java.util.concurrent的缩写，这个包中包含了支持并发操作的各种工具：</li>
+<li>原子类：底层使用CAS机制实现原子性，原子类包括：AtomicInteager 支持对int类型变量的原子操作、AtomicBoolean、AtomicLong、AtomicReference 支持对引用类型变量进行原子操作</li>
+<li>Lock锁类：和synchroized类似，在此基础上增加了超时机制，响应中断机制，用于解决多线程安全问题</li>
+<li>线程池：可以方便的管理线程，避免重复开线程和杀线程的消耗</li>
+<li>并发容器：比如ConcurrentHashMap、CopyOnWriteArrayList，支持多线程操作的并发集合</li>
+</ul>
+<h3 id="java哪些地方用来CAS？"><a href="#java哪些地方用来CAS？" class="headerlink" title="java哪些地方用来CAS？"></a>java哪些地方用来CAS？</h3><ul>
+<li>CAS是比较和交换的意思，使用场景有原子类、AQS、并发容器</li>
+<li>实现类原子类 atomicInteager…、并发容器集合 ConcurrentHashMap、Lock的底层实现是AQS，AQS的实现是通过一个volatile的状态变量和CAS操作控制线程的访问权限保证原子性</li>
+</ul>
+<h2 id="Java集合"><a href="#Java集合" class="headerlink" title="Java集合"></a>Java集合</h2><h3 id="说说对java集合的理解："><a href="#说说对java集合的理解：" class="headerlink" title="说说对java集合的理解："></a>说说对java集合的理解：</h3><ul>
+<li>java集合类主要分为两类：Collection和Map这两个接口派生而出，其中Collection接口派生出 List、Set、Queue</li>
+<li>Set 中元素无序存储、元素不可重复</li>
+<li>List 是有序存储，顺序为存储顺序，元素可以重复</li>
+<li>Queue 是先进先出队列</li>
+<li>Map 是存放键值对的 代表映射关系的集合</li>
+<li>这些集合的实现类有ArrayList、LinkedList、TreeSet、HashSet、HashMap等，这些实现类都不是线程安全，但是性能好</li>
+<li>线程安全的集合实现类有：Vector、HashTable、ConcurrentHashMap</li>
+<li>Vector实现了List接口，是一个动态数组，所有方法都是同步的，使用了synchronized实现</li>
+<li>HashTable 实现了Map接口，是基于hash表的数据结构，用于存储键值对，不允许有null键和值，所有方法也是同步的，因此是线程安全的，但是性能不好</li>
+<li>HashTable、ConcurrentHashMap、TreeMap、TreeMap、EnumMap、EnumSet 不允许有null出现</li>
+</ul>
+<h3 id="说说线程安全的集合："><a href="#说说线程安全的集合：" class="headerlink" title="说说线程安全的集合："></a>说说线程安全的集合：</h3><ul>
+<li>线程安全的集合有Vector 实现List接口，底层是动态数组、HashTable 实现Map类，底层是哈希表实现</li>
+<li>利用Collection工具类，提供了synchronizedList&#x2F;Set等方法，将集合类包装从线程安全的集合类</li>
+<li>使用JUC包下的并发容器，比如ConcurrentHashMap、ConcurrentLinkedQueue</li>
+<li>使用写时复制的批发容器，比如 CopyOnWirteArrayList &#x2F; Set，读写时会创建一个新的副本在这个上面修改、不会受到写操作的影响</li>
+</ul>
+<h3 id="说说HashMap的底层原理："><a href="#说说HashMap的底层原理：" class="headerlink" title="说说HashMap的底层原理："></a>说说HashMap的底层原理：</h3><ul>
+<li>再JDK1.8之前HahMap的底层是数组加链表、再1.8之后是数组加链表加红黑树</li>
+<li>put流程是 根据哈希算法确定元素的下标位置，当向集合存入数据时，会计算传入key的hash值，通过将哈希值取绝对值再根据集合长度取余来确定元素位置</li>
+<li>如果这个位置存在其他元素，则发生哈希冲突，这个新的元素会被存在当前位置的链表中，如果链表的长度超过8，就会转化为红黑树。</li>
+<li>Hash不是线程安全</li>
+</ul>
+<h3 id="说说HashMap和HashTable的区别："><a href="#说说HashMap和HashTable的区别：" class="headerlink" title="说说HashMap和HashTable的区别："></a>说说HashMap和HashTable的区别：</h3><ul>
+<li>区别在于是否线程安全，是否可以存放null值</li>
+<li>Hashtable再实现Map接口的时候包装了线程安全，加入了同步机制</li>
+<li>HashMap是非线程安全，所有HashTable的性能不如HashMap</li>
+<li>HashTable不允许存入null，无论是key还是Value，都会异常</li>
+<li>HashMap可以存放null，都可以</li>
+<li>多线程下推荐使用ConcurrentHashMap，它不但保证了线程安全，也降低了锁的颗粒度，提高了并发访问的性能</li>
+</ul>
+<h3 id="HashMap是线程安全的吗？如果不是该如何解决？"><a href="#HashMap是线程安全的吗？如果不是该如何解决？" class="headerlink" title="HashMap是线程安全的吗？如果不是该如何解决？"></a>HashMap是线程安全的吗？如果不是该如何解决？</h3><ul>
+<li>使用Hashtable、使用Collections将HashMap包装成线程安全的HashMap、使用ConcurrentHashMap,</li>
+</ul>
+<h3 id="说说ConcurrentHashMap："><a href="#说说ConcurrentHashMap：" class="headerlink" title="说说ConcurrentHashMap："></a>说说ConcurrentHashMap：</h3><ul>
+<li>ConcurrentHashMap的底层数据结构与HashMap一样,也是采用“数组+链表+红黑树 </li>
+<li>采用锁定头节点的方式降低了锁粒度,以较低的性能代价实现了线程安全。</li>
+<li>实现机制：初始化数组或头节点时,ConcurrentHashMap并没有加锁,而是CAS的方式进行原子替换 </li>
+<li>插入数据时会进行加锁处理,但锁定的不是整个数组,而是槽中的头节点。所以,ConcurrentHashMap中锁的粒度是槽,而不是整个数组,并发的性能很好。 </li>
+<li>扩容时会进行加锁处理,锁定的仍然是头节点。并且,支持多个线程同时对数组扩容,提高并发能力。 </li>
+<li>在扩容的过程中,依然可以支持查找操作。</li>
+</ul>
+<h3 id="说说对ArrayList的理解："><a href="#说说对ArrayList的理解：" class="headerlink" title="说说对ArrayList的理解："></a>说说对ArrayList的理解：</h3><ul>
+<li>ArrayList是基于数组实现的，内部封装了一个Object[] 数组</li>
+<li>通过默认构造器创建的时候，先被初始化为空数组，之后在首次添加数据的时候，将其初始化为容量为10的数组</li>
+<li>也可以通过有参构造函数创建容器，通过参数显式指定数组的容量，数组会被初始化为指定容量的数组</li>
+<li>如果向ArrayList数组中添加数据超出长度限制，会自动触发自动扩容，然后添加数据</li>
+<li>扩容计算数组拷贝，将旧数组的数据拷贝到新数组中，新数组的长度为原来的1.5倍</li>
+<li>支持缩容，但是不会自动缩容，可以调用trimToSize（）方法</li>
+<li>ArrayList是有序可重复集合，提供了iterator方法</li>
+</ul>
+<h3 id="说说ArrayList和LinkedList有什么区别："><a href="#说说ArrayList和LinkedList有什么区别：" class="headerlink" title="说说ArrayList和LinkedList有什么区别："></a>说说ArrayList和LinkedList有什么区别：</h3><ul>
+<li>ArrayList的实现是基于数组的，LinkedList的实现是基于双向链表</li>
+<li>对于随机访问集合元素，ArrayList要优于Linked，ArrayList可以根据下标以复杂度为1对元素进行随机访问，而LinkedList的每个元素要都是依赖地址指针和下一个元素连接，所以查找的复杂度为N</li>
+<li>对于插入和删除的操作，LinkedList要优于ArrayList，因为当元素被添加到Linked任意位置，只需要调节节点的前后引用，但是ArrayList插入操作可能要移动大量元素</li>
+<li>LinkedList比Array更占内存，因为除了存储数据，还存储了两个前后引用</li>
+</ul>
+<h3 id="说说List和Set的区别："><a href="#说说List和Set的区别：" class="headerlink" title="说说List和Set的区别："></a>说说List和Set的区别：</h3><ul>
+<li>List集合是有序存储的，可以存储重复的元素，集合内每个元素都有对应的顺序索引，默认是按照插入顺序设置索引</li>
+<li>Set集合中的元素是无序存储的，不能存储重复元素，不允许包含相同的元素，会失败，add方法会返回False</li>
+<li>Set虽然无序，但是也有支持排序的集合：TreeSet，TreeSet可以确保元素处于排序状态，底层是红黑树实现，如果元素实现了Comparable接口，TreeSet会使用接口的compareTo（）方法来确定元素顺序，如果在创建TreeSet的时候在参数中提供一个Comparator，TreeSet会使用这个定制排序来确定元素顺序，TreeSet内部元素不能为Null值</li>
+</ul>
+<h3 id="关于各种集合Null值存放问题："><a href="#关于各种集合Null值存放问题：" class="headerlink" title="关于各种集合Null值存放问题："></a>关于各种集合Null值存放问题：</h3><ul>
+<li><strong>数组和链表实现的集合</strong> 通常直接存储对象，因此能够存放 <code>null</code>。</li>
+<li><strong>哈希表实现的集合</strong> 允许 <code>null</code>，但通常 <code>null</code> 键只能有一个，因为哈希表使用键的哈希码来定位元素，而 <code>null</code> 键是一个特殊情况。</li>
+<li><strong>红黑树和其他需要比较操作的集合</strong> 不允许 <code>null</code>，因为 <code>null</code> 无法参与元素比较。</li>
+<li><strong>线程安全集合</strong> 通常为了避免 <code>null</code> 引发的潜在并发问题，选择不支持 <code>null</code>。</li>
+</ul>
+<h3 id="List一边遍历一遍删除怎么实现？"><a href="#List一边遍历一遍删除怎么实现？" class="headerlink" title="List一边遍历一遍删除怎么实现？"></a>List一边遍历一遍删除怎么实现？</h3><ul>
+<li><p>使用Iterator提供的remove方法</p>
+</li>
+<li><pre><code class="java">List&lt;String&gt; list = new ArrayList&lt;&gt;(Arrays.asList(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;));
+Iterator&lt;String&gt; iterator = list.iterator();
+
+while (iterator.hasNext()) &#123;
+    String element = iterator.next();
+    if (&quot;b&quot;.equals(element)) &#123;
+        iterator.remove();  // 使用迭代器的remove方法
+    &#125;
+&#125;
+</code></pre>
+</li>
+</ul>
+<h1 id="MySQL面试题"><a href="#MySQL面试题" class="headerlink" title="MySQL面试题"></a>MySQL面试题</h1><h3 id="说说innodb和myisam的区别："><a href="#说说innodb和myisam的区别：" class="headerlink" title="说说innodb和myisam的区别："></a>说说innodb和myisam的区别：</h3><ul>
+<li>innodb支持事务，默认支持行锁；MyISAM不支持事务，默认的锁是表锁</li>
+<li>读写性能：Innodb增删改性能更优；MyISAM查询性能更优势</li>
+</ul>
+<h3 id="如何定位慢查询？"><a href="#如何定位慢查询？" class="headerlink" title="如何定位慢查询？"></a>如何定位慢查询？</h3><ul>
+<li>开启慢查询日志，在MySQL的配置文件中设置 slow_query_log参数为1，设置慢查询日志的路径，设置慢查询的时间限制</li>
+<li>找到慢查询的SQL后，可以用EXPLAIN命令查看MySQL是怎么执行SQL语句的</li>
+</ul>
+<h3 id="如何分析、优化不必要的列："><a href="#如何分析、优化不必要的列：" class="headerlink" title="如何分析、优化不必要的列："></a>如何分析、优化不必要的列：</h3><ul>
+<li>用EXPLAIN命令查看，通过key和key_len查询是否命中了索引</li>
+<li>通过type查看这条sql的连接类型，是否存在全索引扫描和全盘扫描</li>
+<li>通过extra判断，是否出现回表，如果有，尝试添加索引挥着修改返回字段来修复</li>
+<li>尽量避免select *，只查询需要的列，减少数据传输量</li>
+</ul>
+<h3 id="说说什么是索引："><a href="#说说什么是索引：" class="headerlink" title="说说什么是索引："></a>说说什么是索引：</h3><ul>
+<li>索引是帮助MySQL高效获取数据的数据结构。数据库系统还维护者特定查找算法的数据结构（B+树），这些数据结构引用数据库数据，这样就可以在数据结构上实现高级查找算法，不用扫描整张表</li>
+<li>提高数据检索成本。降低数据库io的成本</li>
+<li>通过索引列对数据进行排序，降低数据排序成本，降低cpu功耗</li>
+</ul>
+<h3 id="说说索引的分类："><a href="#说说索引的分类：" class="headerlink" title="说说索引的分类："></a>说说索引的分类：</h3><ul>
+<li>主键索引：每个表只能有一个主键索引，通常由主键列自动生成创建，主键索引是一种唯一索引，保证数据唯一性，不允许由null值</li>
+<li>唯一索引：保证索引列的值唯一，可以有多个，允许由null值，适用于需要保证某列唯一性的场景</li>
+<li>普通索引：最常见的索引类型，用于加速查询，不强制保证列的唯一性</li>
+<li>组合索引：包含多个列的索引，用于提高联合查询的效率，列的顺序对查询性能由影响，查询时要按照索引中列的顺序使用索引</li>
+<li>全文索引：用于对文本字段进行全文搜索，使用与搜索长文本数据，如文章内容、评论</li>
+</ul>
+<h3 id="索引的底层数据结构了解吗："><a href="#索引的底层数据结构了解吗：" class="headerlink" title="索引的底层数据结构了解吗："></a>索引的底层数据结构了解吗：</h3><ul>
+<li>MySQL的InnoDB引擎采用了B+树的数据结构来存储索引</li>
+<li>查询的阶数更多，一个节点可以包含更多的子节点。查询路径更短，B+树是平衡树。</li>
+<li>磁盘读写代价更低，非叶子节点只存储指针，叶子节点存储数据</li>
+<li>叶子节点是一个双向链表，B+树便于扫库和区间查询</li>
+</ul>
+<h3 id="说说B树和B-树的区别："><a href="#说说B树和B-树的区别：" class="headerlink" title="说说B树和B+树的区别："></a>说说B树和B+树的区别：</h3><ul>
+<li>B树和B+树都是多路平衡查找树</li>
+<li>B树中所有节点都存放数据；B+树只有叶子节点存放数据，其他节点存放key</li>
+<li>B树叶子节点是独立的，B+树的叶子节点是通过链表与相邻的叶子节点连接</li>
+<li>B树查找使用的二分查找，没有找到叶子节点就结束了；B+树必须从根节点查找，更稳定</li>
+</ul>
+<h3 id="什么是聚簇索引什么是非聚簇索引（二级索引）？什么是回表？"><a href="#什么是聚簇索引什么是非聚簇索引（二级索引）？什么是回表？" class="headerlink" title="什么是聚簇索引什么是非聚簇索引（二级索引）？什么是回表？"></a>什么是聚簇索引什么是非聚簇索引（二级索引）？什么是回表？</h3><ul>
+<li>聚簇索引（聚集索引）：数据和索引放在一块，B+树的叶子节点保存了整行数据，有且只有一个</li>
+<li>非聚簇索引（二级索引）：数据和索引分开存储，B+树的叶子节点存放对应的主键，可以有多个</li>
+<li>回表查询：通过二级索引找到对应的主键值，到聚集索引中查找整行数据，这个过程就是回表</li>
+<li>InnoDB 采用的是聚簇索引，如果没有显式定义主键，InnoDB 会选择一个唯一的非空列作为隐式的聚簇索引；如果这样的列也不存在，InnoDB 会自动生成一个隐藏的行 ID 作为聚簇索引。这意味着数据与主键是紧密绑定的，行数据直接存储在索引的叶子节点上。</li>
+<li>MyISAM 采用的是非聚簇索引，表数据存储在一个地方，而索引存储在另一个地方，索引指向数据行的物理位置。</li>
+</ul>
+<h3 id="说说什么是覆盖查询？"><a href="#说说什么是覆盖查询？" class="headerlink" title="说说什么是覆盖查询？"></a>说说什么是覆盖查询？</h3><ul>
+<li>覆盖索引是指查询使用了索引，并且需要返回的列，在该索引中已经全部能够找到</li>
+<li>当使用id查询，直接走聚集索引查询，一次索引扫描，直接返回数据，性能高</li>
+<li>如果返回的列中没有创建索引，可能会触发回表查询，尽量避免使用select*</li>
+</ul>
+<h3 id="MySQL超大分页怎么处理？"><a href="#MySQL超大分页怎么处理？" class="headerlink" title="MySQL超大分页怎么处理？"></a>MySQL超大分页怎么处理？</h3><ul>
+<li>在数据量较大的时候，limit分页查询会导致性能下降，因为偏移量大，需要跳过的行数多</li>
+<li>优化方式是利用覆盖索引，用子查询获取需要的主键id，如何根据id再查找对应数据。</li>
+<li>这样MySQL只需要扫描索引不用访问实际表数据，提高查询效率</li>
+</ul>
+<h3 id="说说事务的四大特性："><a href="#说说事务的四大特性：" class="headerlink" title="说说事务的四大特性："></a>说说事务的四大特性：</h3><ul>
+<li>事务时一个或多个SQL语句组成的一个执行单元，这些语句要么全部执行完毕，要么全部不执行。事物的主要作用是保证数据库操作的一致性，对于维护数据库完整性非常重要</li>
+<li>事务具有四个基本特性，简称ACID：<ul>
+<li>原子性 Atomicity：事务是不可分割的整体，要么全部执行成功，要么执行失败回滚</li>
+<li>一致性 Consistency：事务执行前后，数据库都要保持一致性状态，比如在账户转账的时候，应该保证转账前后两个账户的总金额保持不变、</li>
+<li>隔离性 Isolation：事物的隔离性确保了并发事务之间互补干扰，用于解决并发执行时可能的问题，比如脏读、不可重复读、幻读，事务提交之前对其他的事务不可见。</li>
+<li>MySQL提供了如 未提交、读已提交、可重复读、串行化来控制事务间的隔离程度</li>
+<li>持久性 Durability：一旦事务提交，它对数据库的更改时永久性的，即使系统崩溃，数据库也能恢复到上一次提交的状态</li>
+</ul>
+</li>
+</ul>
+<h3 id="并发事务问题："><a href="#并发事务问题：" class="headerlink" title="并发事务问题："></a>并发事务问题：</h3><ul>
+<li>脏读：一个事务读到另一个事务没有提交的数据</li>
+<li>不可重复读：一个事务在先后两次读取同一段数据，但是两次的数据不同（在两次读取之间，有其他事务修改并提交了数据）</li>
+<li>幻读：一个事务在条件查数据的时候，没有对应的数据行，但是在插入的时候又出现了这行数据（在两次查询中间，有其他事务插入了新的数据）</li>
+</ul>
+<h3 id="说说事务的隔离级别："><a href="#说说事务的隔离级别：" class="headerlink" title="说说事务的隔离级别："></a>说说事务的隔离级别：</h3><ul>
+<li>MySQL提供四种隔离级别：读未提交、读已提交、可重复读、串行化</li>
+<li><strong>读未提交</strong>：这个级别，事务可以读取其他事务未提交的更改，不能解决所有的并发问题，但是性能高、安全性低。<ul>
+<li>比如：一个事务修改了数据，但是没有提交，另一个事务就会读取到未提交的数据，但是上一个事务可能会回滚，这将导致脏读</li>
+</ul>
+</li>
+<li><strong>读已提交</strong>：在这个级别，事务只能读取到其他事务已经提交的更改。<ul>
+<li>只能读取提交的更改避免了脏读，但是在事务执行的过程，如果其他事务不断提交更改，就会每次读到不一样的数据，会导致不可重复读、幻读</li>
+</ul>
+</li>
+<li><strong>可重复读（MySQL默认）</strong>：在这个级别下，事务会在开始时创建一个快照，在整个事务过程中，所有的读取操作都是以这个快照为基础，所以相同的查询在同一事务中会返回相同的数据<ul>
+<li>但是在某些情况下，会幻读，但是在MySQL，即使使用可重复读隔离级别，幻读通常也不会发生。这是因为事务在开始时使用快照读取数据，并且通过间隙锁防止其他事务插入新数据到查询范围内。</li>
+</ul>
+</li>
+<li><strong>串行化</strong>：在这个级别下，所有事务依次顺序执行，避免并发操作带来的问题<ul>
+<li>性能最差，但是可以避免所有问题</li>
+</ul>
+</li>
+</ul>
+<h3 id="说说undo-log和redo-log的区别："><a href="#说说undo-log和redo-log的区别：" class="headerlink" title="说说undo log和redo log的区别："></a>说说undo log和redo log的区别：</h3><ul>
+<li><code>redo log</code> 和 <code>undo log</code> 是 MySQL 中用于保证事务可靠性的重要日志机制</li>
+<li><code>redo log</code> 记录的是数据页的物理变化，用于保证事务的持久性，即使系统崩溃，已提交的事务也能通过 <code>redo log</code> 恢复</li>
+<li><code>undo log</code> 记录的是数据修改前的状态，主要用于支持事务回滚，保证事务的原子性和一致性。在回滚时，<code>undo log</code> 可以撤销未提交的事务，将数据恢复到原始状态。</li>
+<li>因此，<code>redo log</code> 确保了数据不丢失，而 <code>undo log</code> 确保了事务可以被正确撤销。</li>
+</ul>
+<h3 id="MySQL的主从同步是怎么实现的："><a href="#MySQL的主从同步是怎么实现的：" class="headerlink" title="MySQL的主从同步是怎么实现的："></a>MySQL的主从同步是怎么实现的：</h3><ul>
+<li>主从同步是指在数据库复制架构中，主数据库（Master）将其数据的更改同步到从数据库（Slave）上，以保证数据的一致性和高可用性。</li>
+<li>通常，主数据库会将每次的写操作（如插入、更新、删除）记录到二进制日志（binlog）中，而从数据库则通过读取和执行这些日志中的更改来更新自身的数据状态。</li>
+<li>这个过程可以是异步的、半同步的或同步的，具体取决于复制的配置方式。主从同步常用于负载均衡、读写分离和高可用性场景，但需要注意数据延迟和一致性的问题。</li>
+<li>在主服务器上，所有修改数据的语句（如 INSERT、UPDATE、DELETE）会被记录到二进制日志中。</li>
+<li>主服务器上的一个线程（二进制日志转储线程）负责读取二进制日志的内容并发送给从服务器。</li>
+<li>从服务器接收到二进制日志数据后，会将这些数据写入自己的中继日志（Relay Log）。中继日志是从服务器上的一个本地存储。</li>
+<li>从服务器上有一个 SQL 线程会读取中继日志，并在本地数据库上执行，从而将更改应用到从数据库中，完成同步。</li>
+</ul>
+<h3 id="事务中的隔离性是怎么保证的？解释一下MVCC"><a href="#事务中的隔离性是怎么保证的？解释一下MVCC" class="headerlink" title="事务中的隔离性是怎么保证的？解释一下MVCC"></a>事务中的隔离性是怎么保证的？解释一下MVCC</h3><ul>
+<li>锁：排他锁，一个事务获取了一个数据行的排他锁，其他事务就不能再获取该行的其他锁了</li>
+<li>MVCC：多版本并发控制。是用来实现数据库并发控制的一种机制，通过保存数据的多个版本来允许多个事务同时读写操作</li>
+<li>每个事务再开始时会创建一个快照，保证它在执行过程中看到的数据是一致的，即使其他事务同时修改数据，也能够有效实现数据库隔离性和一致性</li>
+</ul>
+<p>MVCC 是 MySQL InnoDB 存储引擎用来实现高并发环境下数据一致性的一种技术，它通过隐藏字段、<code>undo log</code>、版本链和 <code>ReadView</code> 来实现。在每一行记录中，InnoDB 会保存两个隐藏字段：<code>trx_id</code> 和 <code>roll_pointer</code>。<code>trx_id</code> 记录了最后修改该行记录的事务 ID，<code>roll_pointer</code> 则指向 <code>undo log</code>，保存了记录的旧版本数据。</p>
+<p>这些旧版本数据通过 <code>roll_pointer</code> 形成了一个版本链，类似于一个链表结构，链中每个节点对应一次数据修改。版本链确保事务能够根据需要追溯到数据的历史版本，而 <code>undo log</code> 就是支撑这个版本链的日志系统。</p>
+<p><code>undo log</code> 记录了事务修改数据前的状态，不仅用于事务回滚，也为 MVCC 提供了多版本的数据。在数据读取时，InnoDB 会根据 <code>ReadView</code> 来决定哪些版本对当前事务可见。<code>ReadView</code> 包含当前活跃事务的列表和其他元数据，用于判断一个数据版本是否可以被当前事务读取。</p>
+<p>当事务读取的数据版本对当前事务不可见时，InnoDB 会沿着版本链，通过 <code>undo log</code> 逐个回溯，直到找到一个可见的版本。因此，MVCC 能在高并发场景下，通过提供一致性视图，实现事务的隔离性，避免加锁带来的性能问题，同时确保数据的一致性和隔离性，特别是在可重复读（Repeatable Read）隔离级别下有效避免幻读问题。</p>
+<h1 id="Redis面试题"><a href="#Redis面试题" class="headerlink" title="Redis面试题"></a>Redis面试题</h1>
+
+<h2 id="Redis使用场景"><a href="#Redis使用场景" class="headerlink" title="Redis使用场景"></a>Redis使用场景</h2>
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论。 </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2016-2020 Yelog
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
